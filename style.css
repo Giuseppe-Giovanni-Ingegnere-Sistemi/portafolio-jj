@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0d0d0d;
+    color: #c0c0c0;
+    overflow-x: hidden;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #1a1a1a;
+    border-bottom: 2px solid #b81d24;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+.logo img {
+    height: 50px;
+    animation: rotate 10s infinite linear;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav ul li {
+    margin-left: 20px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #c0c0c0;
+    transition: color 0.3s;
+}
+nav ul li a:hover {
+    color: #b81d24;
+}
+.hero {
+    text-align: center;
+    padding: 150px 20px;
+    background: url('https://your-logo-url-here.png') no-repeat center;
+    background-size: contain;
+    position: relative;
+    overflow: hidden;
+}
+.hero h1 {
+    font-size: 3em;
+    margin: 0;
+    color: #b81d24;
+    animation: fadeInUp 1s ease-out;
+}
+.hero p {
+    animation: fadeInUp 2s ease-out;
+    color: #c0c0c0;
+}
+.content {
+    padding: 100px 50px;
+    background-color: #0d0d0d;
+}
+.section {
+    margin-bottom: 40px;
+}
+.section h2 {
+    border-left: 5px solid #b81d24;
+    padding-left: 10px;
+    position: relative;
+    overflow: hidden;
+    color: #b81d24;
+}
+.section h2:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #b81d24;
+    z-index: -1;
+    animation: slideInLeft 1s ease-out;
+}
+.section p {
+    animation: fadeIn 1s ease-out;
+}
+.competencias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.competencias img {
+    height: 60px;
+    margin: 20px;
+    animation: float 3s ease-in-out infinite;
+}
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: #c0c0c0;
+    border-top: 2px solid #b81d24;
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
